@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://unpkg.com/splitting/dist/splitting.css" />
+    <link rel="stylesheet" href="https://unpkg.com/splitting/dist/splitting-cells.css" />
+    <script src="https://unpkg.com/splitting/dist/splitting.min.js"></script>
+    <style>
+        @import url("https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap");
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: "Inter", sans-serif;
+        }
+
+        body {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+            background: black;
+        }
+
+        span {
+            color: #ff962e;
+            background-image: -webkit-linear-gradient(45deg, #ff962e 44%, #f44336 55%);
+            background-clip: text;
+            -webkit-background-clip: text;
+            text-fill-color: transparent;
+            -webkit-text-fill-color: transparent;
+
+
+            font-size: 10vw;
+            text-decoration: none;
+            font-weight: 100;
+            letter-spacing: -3px;
+            animation: weight 2s infinite;
+            animation-delay: calc(var(--char-index) * 150ms);
+        }
+
+        @keyframes weight {
+            from {
+                font-weight: 100;
+            }
+
+            50% {
+                font-weight: 900;
+            }
+
+            to {
+                font-weight: 100;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <span data-splitting="chars">Code With Kundan</span>
+</body>
+<script> Splitting(); </script>
+
+</html>
